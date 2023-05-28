@@ -1,34 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Documentación
 
-## Getting Started
+### Introducción
+Esta documentación proporciona una descripción detallada del proyecto, incluyendo su estructura de carpetas, las tecnologías utilizadas, las instrucciones de instalación, ejecución y despliegue. El objetivo del proyecto es desarrollar una aplicación web utilizando Next.js, aprovechando las ventajas del SSR (Server-Side Rendering) y las librerías populares de React.
 
-First, run the development server:
+### Estructura de Carpetas
+La estructura de carpetas del proyecto sigue una organización basada en categorías para facilitar la navegación y el mantenimiento del código. A continuación, se presenta la estructura de carpetas:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+- app/
+- components/
+- data/
+- domain/
+- styles/
+- utility/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **app/**: Esta carpeta contiene el app routing de Next.js, encargado de gestionar las rutas de la aplicación y proporcionar una experiencia de navegación fluida. Para obtener más información sobre la estructura y funcionalidad de esta carpeta, consulta la documentación oficial de Next.js.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **components/**: En esta carpeta se encuentran todos los componentes reutilizables utilizados en las diferentes páginas de la aplicación. La estructura de componentes ayuda a organizar y mantener un código modular y eficiente.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **data/**: La carpeta "data" actúa como una capa de acceso a fuentes externas. En este proyecto, se utiliza para acceder al archivo "servicio.json", que proporciona los datos necesarios para la aplicación. Esta estructura facilita la gestión y la separación de las fuentes de datos.
 
-## Learn More
+- **domain/**: La carpeta "domain" contiene la lógica del negocio de la aplicación. Aquí se encuentran los modelos y otros componentes relacionados con la lógica empresarial específica del proyecto. Al mantener la lógica del negocio en una ubicación separada, se promueve la modularidad y el mantenimiento.
 
-To learn more about Next.js, take a look at the following resources:
+- **styles/**: En esta carpeta se encuentran las configuraciones de estilos CSS de la aplicación. Se utilizan tecnologías como Material UI v5.13.2 y TailwindCSS para personalizar y estilizar los componentes de manera sencilla y altamente customizable.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **utility/**: La carpeta "utility" contiene funciones auxiliares que ayudan en el desarrollo del proyecto. Estas funciones se utilizan para realizar tareas comunes o proporcionar funcionalidades adicionales que pueden ser reutilizadas en diferentes partes de la aplicación.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Tecnologías Utilizadas
 
-## Deploy on Vercel
+- **Next.js v13.4.4**: Next.js es un framework popular para desarrollar aplicaciones SSR (Server-Side Rendering) con React. Proporciona una estructura de proyecto organizada y herramientas poderosas para la creación de aplicaciones web robustas y eficientes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Material UI v5.13.2**: Material UI es una biblioteca de componentes completa y altamente customizable para React. Proporciona una amplia gama de componentes preestilizados que facilitan el desarrollo de interfaces atractivas y funcionales.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **TailwindCSS**: TailwindCSS es un framework de CSS utilitario que permite hacer modificaciones rápidas y sencillas en el diseño de la aplicación sin tener que escribir mucho código CSS personalizado. Proporciona una amplia gama de clases utilitarias listas para usar.
+
+- **PostCSS**: PostCSS es una herramienta que se utiliza en combinación con TailwindCSS para
+ eliminar clases CSS no utilizadas. Esto ayuda a optimizar el rendimiento de la aplicación al eliminar el código CSS innecesario.
+
+- **AWS Amplify**: AWS Amplify es un servicio de AWS que facilita el despliegue de aplicaciones de forma sencilla utilizando los servicios en la nube de AWS. Amplify simplifica el proceso de implementación y permite escalar y administrar fácilmente la infraestructura subyacente.
+
+### Instalación
+Sigue los pasos a continuación para instalar y configurar el proyecto en tu entorno local:
+
+1. Clona el repositorio en tu máquina local:
+```
+git clone https://github.com/lucas1619/reto-front.git
+```
+
+2. Navega hasta la carpeta del proyecto:
+```
+cd reto-front
+```
+
+3. Instala todas las dependencias requeridas utilizando npm:
+```
+npm install
+```
+
+### Ejecución
+Una vez instaladas todas las dependencias, puedes ejecutar el proyecto en modo de desarrollo con el siguiente comando:
+
+```
+npm run dev
+```
+
+Esto iniciará la aplicación y podrás acceder a ella a través de tu navegador en la siguiente dirección: `http://localhost:3000`.
+
+### Despliegue
+El despliegue del proyecto se realiza a través de AWS Amplify. Se configuró para que se realice automáticamente cada vez que se realiza un push a la rama "main" del repositorio. Para añadir código externo, se debe enviar un pull request. La aplicación se encuentra desplegada en la siguiente URL: [https://main.d3ju4evtsto0gt.amplifyapp.com/](https://main.d3ju4evtsto0gt.amplifyapp.com/)
