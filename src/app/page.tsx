@@ -5,6 +5,7 @@ import { RecursiveMenu } from '@/components/RecursiveMenu';
 import { useState, useEffect } from 'react';
 import { getMenuData } from '@/data/servicio';
 import { MenuObject } from '@/domain/Menu';
+import { Isotipo } from '@/components/Isotipo';
 
 export default function Home() {
 
@@ -47,9 +48,9 @@ export default function Home() {
       </main>
       <Box>
         <Paper className='w-screen flex items-center justify-around py-6'>
-          <div>a</div>
-          <div>a</div>
-          <div>a</div>
+          <Isotipo />
+          <div>© 2023 Progrez All Rights reserved</div>
+          <Isotipo />
         </Paper>
       </Box>
     </div>
