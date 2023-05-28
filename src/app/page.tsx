@@ -1,37 +1,22 @@
 "use client"
-import { AppBar, Box, Toolbar, Paper, Typography, List } from '@mui/material';
+import { AppBar, Box, Toolbar, Paper, Typography } from '@mui/material';
 import { ExpandMore } from '@mui/icons-material';
-
 import { RecursiveMenu } from '@/components/RecursiveMenu';
-
-const menuData = {
-  lista: [
-    {
-      card_list: [],
-      pays_transfer: [
-        {
-          between_cards: [],
-          banks: [
-            {
-              lock: [],
-              change_pass: []
-            }
-          ],
-          credit_card: []
-        }
-      ],
-      support: [
-        {
-          lock: [],
-          change_pass: []
-        }
-      ],
-      enterprises: []
-    }
-  ]
-};
+import { useState, useEffect } from 'react';
+import { getMenuData } from '@/data/servicio';
+import { MenuObject } from '@/domain/Menu';
 
 export default function Home() {
+
+  const [menuData, setMenuData] = useState<MenuObject>({lista: []});
+
+  useEffect(() => {
+    getMenuData().then((data) => {
+      setMenuData(data);
+    });
+  }, []);
+
+  
   return (
     <div className='flex flex-col h-screen'>
       <header>

@@ -12,7 +12,8 @@ interface RecursiveMenuProps {
 }
 
 const RecursiveMenu: React.FC<RecursiveMenuProps> = ({ menuItems, level }) => {
-    const [open, setOpen] = React.useState<boolean[]>(Array(menuItems.length).fill(false));
+    const [open, setOpen] = useState<boolean[]>(Array(menuItems.length).fill(false));
+    if(menuItems.length === 0) return null;
     const menuObject = menuItems[0];
     const keys = Object.keys(menuObject);
     const root = level === 0;
