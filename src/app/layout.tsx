@@ -1,6 +1,6 @@
 "use client"
 import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
-import { darkThemeOptions } from './styles/theme/darkTheme';
+import { darkThemeOptions } from '../styles/theme/darkTheme';
 
 import './globals.css'
 
