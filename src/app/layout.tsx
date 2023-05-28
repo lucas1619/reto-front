@@ -21,6 +21,11 @@ export default function RootLayout({
   const darkTheme = createTheme(darkThemeOptions);
   return (
     <html lang="en">
+      <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reto Frontend</title>
+      </head>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
         <body className={inter.className}>{children}</body>
