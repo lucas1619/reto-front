@@ -49,7 +49,6 @@ export default function Home() {
       <Box>
         <Paper className='w-screen flex items-center justify-around py-6'>
           <Isotipo />
-          <div>© 2023 Progrez All Rights reserved</div>
           <Isotipo />
         </Paper>
       </Box>
